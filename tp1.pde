@@ -138,7 +138,7 @@ void draw() {
  
  //creditos//
  
- if(tiempo >= 17){
+if(tiempo >= 17){
    fill(247, 249, 31, pant - 4080);
    text("2", width/2 + 80,height/2 - 20);
    fill(250, 250, 250, pant - 4080);
@@ -160,85 +160,98 @@ void draw() {
    text("as ''Dr. Eggman''", width/2, height - 180);
  }
  
- if(tiempo >= 22){
-   fill(0, 0, 0, pant - 5280);
+ if(tiempo >= 23){
+   fill(0, 0, 0, pant - 5520);
    rect(-1, 0, width + 1, height); 
  }
  
- if(tiempo >= 23){
-   fill(247, 249, 31, pant - 5520);
+ if(tiempo >= 24){
+   fill(247, 249, 31, pant - 5760);
    text("Miles Prower", width/2, 190);
    text("Mecha Sonic 2.0", width/2, height/2 + 60);
-   fill(250, 250, 250, pant - 5520);
+   fill(250, 250, 250, pant - 5760);
    text("as ''Tails''", width/2, height/2 - 50);
    text("as ''Silver Sonic''", width/2, height - 180);
  }
 
- if(tiempo >= 25){
-   fill(0, 0, 0, pant - 6000);
+ if(tiempo >= 27){
+   fill(0, 0, 0, pant - 6480);
    rect(-1, 0, width + 1, height); 
  }
  
- if(tiempo >= 26){
-   fill(247, 249, 31, pant - 6240);
+ if(tiempo >= 28){
+   fill(247, 249, 31, pant - 6720);
    text("executive producer", width/2, 100);
    text("producer", width/2, 270);
    text("director", width/2, 440);
-   fill(250, 250, 250, pant - 6240);
+   fill(250, 250, 250, pant - 6720);
    text("Hayao Nakayama", width/2, 160);
    text("shinobu toyoda", width/2, 330);
    text("masaharu yoshii", width/2, 500);
  }
  
- if(tiempo >= 28){
-   fill(0, 0, 0, pant - 6720);
+ if(tiempo >= 31){
+   fill(0, 0, 0, pant - 7440);
    rect(-1, 0, width + 1, height); 
  }
  
-  if(tiempo >= 29){
-   fill(247, 249, 31, pant - 6960);
+  if(tiempo >= 32){
+   fill(247, 249, 31, pant - 7680);
    text("chief programmer", width/2, 100);
    text("game planner", width/2, 270);
    text("character desing\nand chief artist", width/2, 440);
-   fill(250, 250, 250, pant - 6960);
+   fill(250, 250, 250, pant - 7680);
    text("Yuji Naka(YU2)", width/2, 160);
    text("Hirokazu Yasuhara\n(Carol Yas)", width/2, 330);
    text("Yasushi Yamaguchi\n(Judy Totoya)", width/2, 500);
  }
  
- if(tiempo >= 32){
-   fill(0, 0, 0, pant - 7680);
+ if(tiempo >= 35){
+   fill(0, 0, 0, pant - 8400);
    rect(-1, 0, width + 1, height); 
  }
  
- if(tiempo >= 33){
-   fill(247, 249, 31, pant - 7920);
+ if(tiempo >= 36){
+   fill(247, 249, 31, pant - 8640);
    text("music composer", width/2, 190);
    text("sound programmer", width/2, height/2 + 60);
-   fill(250, 250, 250, pant - 7920);
+   fill(250, 250, 250, pant - 8640);
    text("Masato Nakamura\n(Dreams Come True)", width/2, height/2 - 50);
    text("Tomoyuki Shimada", width/2, height - 180);
  }
  
- if(tiempo >= 35){
-   fill(0, 0, 0, pant - 8400);
+ if(tiempo >= 39){
+   fill(0, 0, 0, pant - 9360);
    rect(-1, 0, width + 1, height);
  }
+      
+ if(tiempo >= 40){
+   fill(250, 250, 250, pant - 9600);
+   text("presented by", width/2, 200);
+   text("sega", width/2, 275);
+   text("and", width/2, 335);
+   text("Santiago Ortiz", width/2, 400);
+ }
  
- if(tiempo >= 36){
-   tint(255,pant - 8640);
+ if(tiempo >= 43){
+   fill(0, 0, 0, pant - 10320);
+   rect(-1, 0, width + 1, height);
+ }
+      
+ if(tiempo >= 44){
+   tint(255,pant - 10560);
    image(despedida, 90, 90);
  }
  
 
- if(tiempo >= 39){
-   fill(0, 0, 0, pant - 9360);
+ if(tiempo >= 48){
+   fill(0, 0, 0, pant - 11520);
    rect(-1, 0, width + 1, height); 
  }
  
  
 //reincio//
- if(tiempo >= 41){
+ if(tiempo >= 50){
    println(sobreBoton(width/2 - 150,height/2 - 40, 297, 40));
    fill(250);
    boton(width/2 - 150,height/2 - 40, 297, 40);
