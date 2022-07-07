@@ -1,6 +1,7 @@
 // Alumno: Ortiz Santiago //
 // Legajo: 91484/6 //
 // Com. 1 //
+// link video: https://youtu.be/7u0BfvzvW1s //
 
 PImage [] Guy = new PImage[4];
 PImage [] Baron = new PImage [2];
