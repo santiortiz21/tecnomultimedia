@@ -102,13 +102,11 @@ void draw(){
   }
   
   if(win){
-    Inicio = false;
     tiempo = 0;
     pantallaVictoria();
   }
   
   if(tiempo >= 3){
-    Inicio = false;
     tiempo = 0;
     pantallaDerrota();
   }
