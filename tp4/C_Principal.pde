@@ -2,48 +2,72 @@ class Principal{
     X x;
     Zero z;
     Fondo f;
+    Pista p;
+    Faros l;
+    Enemigo e;
+    Disparo d;
+    Enemigo [] es = new Enemigo [3];
+    
     Principal(){
       x = new X();
       z = new Zero();
       f = new Fondo();
+      p = new Pista();
+      l = new Faros();
+      e = new Enemigo();
+      d = new Disparo(185);
+      
+      for(int i = 0; i<es.length; i++){
+        es[i] = new Enemigo(850 + i*width/4);
+      }
     }
 
   void dibujarPrincipal() {
-    /*
-    M2 = 0 - frameCount * 4;
-  
-    for (int D = 2119; D < 10595; D = D + 4238){
-      image (Fondo, D + M, height / 2); 
-    }
-  
-    for (int D = 400; D < 22520; D = D +1106){
-      float Mov;
-      Mov = D + M2;
-      image (Pista, Mov, 300);
-    }*/
+    
     f.DibujarFondo();
     
-    z.DibujarZer ();
+    p.DibujarPista();
     
-    x.DibujarX ();
-  
-    /*for (int D = 400; D < 22520; D = D +1106){
-      float Mov;
-      Mov = D + M2;
-      image (Faros, Mov, 300);  
-  
-    }*/
-  
+    e.DibujarEnemigo();
+    e.MoverEnemigo ();
+    
+    for(int i=0; i<es.length; i++){
+      es[i].DibujarEnemigo();
+      es[i].MoverEnemigo();
+    }
+    
+    z.DibujarZer();
+    
+    x.DibujarX();
+    
+    d.DibujarDisparo();
+    d.Mover(381);
+    
+    DestruirEnemigo();
+    
+    l.DibujarFaros();
   }
   
   void Atacar() {
     if (key == 'x' || key == 'X'){
       x.Disparar ();
+      d.DispararBala();
     }
-    if (key == 'z'){
-      z.Saltar();
+  }
+  
+  void DestruirEnemigo(){
+    float distan = dist(d.dx, d.dy, e.nx,e.ny);
+    if (distan > e.ntam + d.dtam){
+      d.BalaDisparada = false;
+      e.Destruir();
     }
-
+    for(int i = 0; i < es.length; i++){
+      float distancia = dist(d.dx, d.dy, es[i].nx,e.ny);
+      if (distancia >= es[i].ntam + d.dtam){
+        d.BalaDisparada = false;
+        e.Destruir();
+      }
+    }
   }
 
 }
