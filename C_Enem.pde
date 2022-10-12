@@ -1,7 +1,9 @@
 class Enemigo{
   PImage Enemigo;
-  float nx,ny, nvel, ntam;
-  boolean EnemigoMuerto;
+  PImage [] Explo = new PImage[30];
+  float nx,ny, nvel, ntam, nx2;
+  int cuenta;
+  boolean EnemigoMuerto, Explosion;
   
   Enemigo (){
     Enemigo = loadImage("Enemigo.png");
@@ -10,10 +12,19 @@ class Enemigo{
     ny = 378;
     nvel = 4;
     EnemigoMuerto = false;
+    Explosion = false;
+    for(int i = 0; i < Explo.length; i ++){
+      Explo [i] = loadImage("Explosion" +i+ ".png");
+    }
+    cuenta = 0;
+    nx2 = nx;
   }
   
   void DibujarEnemigo(){
     image (Enemigo, nx, ny, ntam, ntam + 21);
+    if (Explosion){
+      image(Explo[cuenta], nx2, ny);
+    }
   }
   
   void MoverEnemigo () {
@@ -28,6 +39,18 @@ class Enemigo{
   
   void Destruir() {
     EnemigoMuerto = true;
+    Explosion = true;
   }
   
+  void Boom () {
+      if (cuenta < 30){
+        cuenta += 1;
+        nx2 = nx2;
+      }
+      if (cuenta >= 30){
+        cuenta = 0;
+        Explosion = false;
+        nx2 = nx;
+      }
+  }
 }

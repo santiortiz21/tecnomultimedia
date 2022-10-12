@@ -8,7 +8,7 @@ void setup(){
 }
 
 void draw(){  
-  p.dibujarPrincipal(); 
+  p.dibujarPrincipal();
   if (keyPressed){
     p.Atacar (keyCode);
   }
