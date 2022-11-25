@@ -6,7 +6,7 @@
 import ddf.minim.*;
 Minim minim;
 
-AudioPlayer Disparo, Destr, Musica1, Victoria, Derrota;
+AudioPlayer Disparo, Destr, Musica1, Victoria, Derrota, Select;
 
 Principal p;
 void setup(){
@@ -18,6 +18,7 @@ void setup(){
   Musica1 = minim.loadFile("Stage1.mp3", 1024);
   Victoria = minim.loadFile("Victoria.mp3", 1024);
   Derrota = minim.loadFile("Derrota.mp3", 1024);
+  Select = minim.loadFile("Select.mp3", 1024);
 }
 
 void draw(){  

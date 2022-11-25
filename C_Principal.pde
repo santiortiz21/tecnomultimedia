@@ -94,7 +94,7 @@ class Principal{
           et[i].DibujarEnemigo();
           et[i].MoverEnemigo ();
           et[i].Boom();
-          if(et[i].nx < -50){
+          if(et[i].nx < -50 - et[i].ntam){
             danopl ++;
             et[i].Destruir();
           }
@@ -114,7 +114,7 @@ class Principal{
         ea.DibujarEnemigo();
         ea.MoverEnemigo();
         ea.Boom();
-        if(ea.nx < -50){
+        if(ea.nx < -50 - ea.ntam){
           danopl ++;
           ea.Destruir();
         }
@@ -133,7 +133,7 @@ class Principal{
         mt.DibujarEnemigo();
         mt.MoverEnemigo();
         mt.Boom();
-        if(mt.nx < -50){
+        if(mt.nx < - 50 - mt.ntam){
           danopl ++;
           mt.Destruir();
         }
@@ -166,7 +166,7 @@ class Principal{
       }
       if(tiempo >= 138){
         trans = 0 + (frameCount*2 - 16560);
-        fill(0,0,0, trans);
+        fill(255,255,255, trans);
         rect(-1, 0, width +1, height);
       }
       if(tiempo == 140){
@@ -187,7 +187,7 @@ class Principal{
       
       if (tiempo >= 0 && tiempo <= 4){
         trans = 255 - frameCount*2;
-        fill(0,0,0, trans);
+        fill(255,255,255, trans);
         rect(-1, 0, width +1, height);
       }
     }
@@ -209,11 +209,15 @@ class Principal{
   
   void Transiciones(){
     if(fase >= 0 && fase <= 2){
+      Select.play();
+      Select.rewind();
       fase ++;
       frameCount = 0;
     }
     if(fase == 4){
       if(mouseX > 46 && mouseX < 277 && mouseY > 63 && mouseY < 90){
+        Select.play();
+        Select.rewind();
         f.f1 = 2119;
         f.f2 = 6357;
         p.p1 = 553;
@@ -233,6 +237,8 @@ class Principal{
         fase = 3;
       }
       if(mouseX > 46 && mouseX < 389 && mouseY > 175 && mouseY < 202){
+        Select.play();
+        Select.rewind();
         f.f1 = 2119;
         f.f2 = 6357;
         p.p1 = 553;
@@ -251,6 +257,8 @@ class Principal{
     }
     if(fase == 5){
       if(mouseX > 38 && mouseX < 269 && mouseY > 77 && mouseY < 104){
+        Select.play();
+        Select.rewind();
         f.f1 = 2119;
         f.f2 = 6357;
         p.p1 = 553;
@@ -268,6 +276,8 @@ class Principal{
         fase = 3;
       }
       if(mouseX > 435 && mouseX < 778 && mouseY > 77 && mouseY < 104){
+        Select.play();
+        Select.rewind();
         f.f1 = 2119;
         f.f2 = 6357;
         p.p1 = 553;
