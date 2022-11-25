@@ -1,3 +1,8 @@
+// Alumno: Ortiz Santiago
+// Legajo: 91484/6
+// Link del video: https://youtu.be/e1AHglSbhaA 
+// Link a la version con jefe: https://github.com/santiortiz21/tecnomultimedia/tree/tp5_Jefe
+
 import ddf.minim.*;
 Minim minim;
 
